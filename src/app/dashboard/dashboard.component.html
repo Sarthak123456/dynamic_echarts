@@ -1,0 +1,332 @@
+         <!-- Begin Page Content -->
+         <div class="container-fluid" cdkDropListGroup>
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center mb-4">
+              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+              <ul class="navbar-header ml-auto">
+                <!-- Nav Item - Alerts -->
+
+                <li class="nav-item dropdown no-arrow mx-1">
+                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> Explore Investments</a>
+                  </li>
+
+                  <li class="nav-item dropdown no-arrow mx-1">
+                     <button (click)="add(1000, 'friday')" class="'btn btn-primary">shop_icon</button>
+                  </li>
+            </ul>
+          </div>
+
+
+
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+              <!-- Area Chart -->
+              <div class="col-xl-8 col-lg-7">
+                  <div class="card shadow mb-4">
+                      <!-- Card Header - Dropdown -->
+                      <div
+                          class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                          <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+
+                      </div>
+                      <!-- Card Body -->
+                      <div class="card-body pb-0 pt-0 py-0 px-0"  cdkDropList
+                      [cdkDropListData]="todo"
+                      (cdkDropListDropped)="drop($event)">
+                          <div class="chart-area">
+                            <div echarts [options]="chartOption" class="demo-chart" [merge]="mergeOptions" (chartInit)="onChartInit($event)"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Pie Chart -->
+              <div class="col-xl-4 col-lg-5 d-flex flex-column">
+                  <div class="card shadow mb-4">
+                      <!-- Card Body -->
+                      <div class="card-body pb-1 pt-1">
+
+                        <div class="row">
+                          <div class="col-md-8 d-flex">
+
+                            <div class="col-md-6">
+                            <p class="mb-0"><small>Retire at</small></p>
+                            <h5>45 age</h5>
+                            </div>
+
+                            <div class="col-md-6">
+                              <p class="mb-0"><small>Financial end</small></p>
+                              <h5>90 age</h5>
+                            </div>
+
+                          </div>
+
+                          <div class="col-md-4">
+                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                            src="img/undraw_posting_photo.svg" alt="...">
+                          </div>
+
+
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-8">
+
+                            <div class="col-md-12">
+                              <p class="mb-0"><small>Retirement net worth</small></p>
+                              <h5> &#x20B9; 14.2 Lac</h5>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                  </div>
+
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div
+                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Add life event</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="row justify-content-between">
+
+                        <div cdkDropList
+                        [cdkDropListData]="done"
+                        (cdkDropListDropped)="drop($event)">
+                        <div class="col-md-3 event-box" cdkDrag>
+                          <fa-icon [icon]="house" ></fa-icon>
+                          text
+                        </div>
+                      </div>
+
+
+                      <div cdkDropList
+                      [cdkDropListData]="done2"
+                      (cdkDropListDropped)="drop($event)">
+                      <div class="col-md-3 event-box" cdkDrag>
+                        <fa-icon [icon]="house" ></fa-icon>
+                        text
+                      </div>
+                    </div>
+
+                    <div cdkDropList
+                    [cdkDropListData]="done3"
+                    (cdkDropListDropped)="drop($event)">
+                    <div class="col-md-3 event-box" cdkDrag>
+                      <fa-icon [icon]="house" ></fa-icon>
+                      text
+                    </div>
+                  </div>
+
+                      </div>
+                      <div class="row justify-content-between">
+
+                        <div cdkDropList
+                        [cdkDropListData]="done"
+                        (cdkDropListDropped)="drop($event)">
+                        <div class="col-md-3 event-box" cdkDrag>
+                          <fa-icon [icon]="house" ></fa-icon>
+                          text
+                        </div>
+                      </div>
+
+
+                      <div cdkDropList
+                      [cdkDropListData]="done2"
+                      (cdkDropListDropped)="drop($event)">
+                      <div class="col-md-3 event-box" cdkDrag>
+                        <fa-icon [icon]="house" ></fa-icon>
+                        text
+                      </div>
+                    </div>
+
+                    <div cdkDropList
+                    [cdkDropListData]="done3"
+                    (cdkDropListDropped)="drop($event)">
+                    <div class="col-md-3 event-box" cdkDrag>
+                      <fa-icon [icon]="house" ></fa-icon>
+                      text
+                    </div>
+                  </div>
+
+                      </div>
+
+                      <div class="row justify-content-between">
+
+                        <div cdkDropList
+                        [cdkDropListData]="done"
+                        (cdkDropListDropped)="drop($event)">
+                        <div class="col-md-3 event-box" cdkDrag>
+                          <fa-icon [icon]="house" ></fa-icon>
+                          text
+                        </div>
+                      </div>
+
+
+                      <div cdkDropList
+                      [cdkDropListData]="done2"
+                      (cdkDropListDropped)="drop($event)">
+                      <div class="col-md-3 event-box" cdkDrag>
+                        <fa-icon [icon]="house" ></fa-icon>
+                        text
+                      </div>
+                    </div>
+
+                    <div cdkDropList
+                    [cdkDropListData]="done3"
+                    (cdkDropListDropped)="drop($event)">
+                    <div class="col-md-3 event-box" cdkDrag>
+                      <fa-icon [icon]="house" ></fa-icon>
+                      text
+                    </div>
+                  </div>
+
+                      </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+              </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+              <div class="col-lg-4 mb-4">
+
+                  <!-- Out of cash -->
+                  <div class="card shadow mb-4">
+                      <div class="card-body d-flex">
+                          <div class="text-center">
+                              <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                  src="img/undraw_posting_photo.svg" alt="...">
+                          </div>
+                          <div>
+                            <h6 class="m-0 font-weight-bold text-primary">Out of cash</h6>
+                            <p>Out of cash at 28 (2021) with a gap of &#x20B9;<strong>14.2Lac.</strong><br>
+                            Tap for more info.</p>
+                          </div>
+
+
+                      </div>
+                  </div>
+
+
+              </div>
+
+
+              <div class="col-lg-4 mb-4">
+
+                <!-- Out of cash -->
+                <div class="card shadow mb-4">
+                    <div class="card-body d-flex">
+                        <div class="text-center">
+                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                src="img/undraw_posting_photo.svg" alt="...">
+                        </div>
+                        <div>
+                          <h6 class="m-0 font-weight-bold text-primary">Out of cash</h6>
+                          <p>Out of cash at 28 (2021) with a gap of &#x20B9;<strong>14.2Lac.</strong><br>
+                          Tap for more info.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-lg-4 mb-4">
+
+              <!-- Out of cash -->
+              <div class="card shadow mb-4">
+                  <div class="card-body d-flex">
+                      <div class="text-center">
+                          <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                              src="img/undraw_posting_photo.svg" alt="...">
+                      </div>
+                      <div>
+                        <h6 class="m-0 font-weight-bold text-primary">Out of cash</h6>
+                        <p>Out of cash at 28 (2021) with a gap of &#x20B9;<strong>14.2Lac.</strong><br>
+                        Tap for more info.</p>
+                      </div>
+
+
+                  </div>
+              </div>
+
+
+          </div>
+
+
+          </div>
+
+      </div>
+
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#exampleModal" #openModal>
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" #modal>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Goal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="myForm" >
+          <div>
+            <label>
+              Name:
+              <input formControlName="name" placeholder="Your name">
+            </label>
+          </div>
+          <div>
+            <label>
+              Email:
+              <input formControlName="email" placeholder="Your email">
+            </label>
+          </div>
+          <div class="wrapper">
+            <button class="plusminus" (click)="handleMinus()">-</button>
+            <input type="number" class="num" [value]='amount' formControlName="amount" />
+            <button class="plusminus" (click)="handlePlus()">+</button>
+          </div>
+
+          <div>
+            <label>
+              Message:
+              <input formControlName="message" placeholder="Your message">
+            </label>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onSubmit(myForm)">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- /.container-fluid -->
