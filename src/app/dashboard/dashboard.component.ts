@@ -45,10 +45,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     // this.add();
     this.myForm = new FormGroup({
-      name: new FormControl('Sammy'),
-      email: new FormControl(''),
+      name: new FormControl('Thur'),
       amount: new FormControl(1000),
-      message: new FormControl('')
     });
   }
   onSubmit(form: FormGroup) {
@@ -72,7 +70,7 @@ export class DashboardComponent implements OnInit {
   chartOption:any = {
     xAxis: {
       axisLabel: {
-        formatter: '{value} kg',
+        formatter: '{value}',
         align: 'center'
       },
 

@@ -3,7 +3,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+              <h1 class="h3 mb-0 text-gray-800">Your entire financial life</h1>
               <ul class="navbar-header ml-auto">
                 <!-- Nav Item - Alerts -->
 
@@ -294,33 +294,22 @@
         </button>
       </div>
       <div class="modal-body">
+
         <form [formGroup]="myForm" >
-          <div>
-            <label>
-              Name:
-              <input formControlName="name" placeholder="Your name">
-            </label>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input  formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+            <small id="emailHelp" class="form-text text-muted">name to be shown on the x-axis of the graph</small>
           </div>
-          <div>
-            <label>
-              Email:
-              <input formControlName="email" placeholder="Your email">
-            </label>
-          </div>
+
           <div class="wrapper">
             <button class="plusminus" (click)="handleMinus()">-</button>
             <input type="number" class="num" [value]='amount' formControlName="amount" />
             <button class="plusminus" (click)="handlePlus()">+</button>
           </div>
-
-          <div>
-            <label>
-              Message:
-              <input formControlName="message" placeholder="Your message">
-            </label>
-          </div>
-          <button type="submit">Send</button>
         </form>
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

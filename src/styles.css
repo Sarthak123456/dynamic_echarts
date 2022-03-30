@@ -4429,11 +4429,11 @@ input[type="button"].btn-block {
 
 .active{
   background: red;
-    border-radius: 6%;
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar-light .navbar-nav .show > .nav-link,
