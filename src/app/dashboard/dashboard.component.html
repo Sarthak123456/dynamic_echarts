@@ -8,13 +8,23 @@
                 <!-- Nav Item - Alerts -->
 
                 <li class="nav-item dropdown no-arrow mx-1">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-download fa-sm text-white-50"></i> Explore Investments</a>
+                  <a href="#" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-lg"><i
+                    class="fas fa-download fa-sm text-white-50 "></i> Explore Investments</a>
                   </li>
 
                   <li class="nav-item dropdown no-arrow mx-1">
-                     <button (click)="add(1000, 'friday')" class="'btn btn-primary">shop_icon</button>
+                     <button (click)="add(100, 'friday')" class="btn btn-primary shop"> <fa-icon [icon]="house" class="black"></fa-icon></button>
                   </li>
+
+                  <li class="nav-item dropdown no-arrow mx-1">
+                    <button class="btn btn-primary shop2"> <fa-icon [icon]="house" class="black"></fa-icon></button>
+                 </li>
+
+                 <li class="nav-item dropdown no-arrow mx-1">
+                  <button class="btn btn-primary shop2"> <fa-icon [icon]="house" class="black"></fa-icon></button>
+               </li>
+
+
             </ul>
           </div>
 
@@ -29,17 +39,23 @@
               <div class="col-xl-8 col-lg-7">
                   <div class="card shadow mb-4">
                       <!-- Card Header - Dropdown -->
-                      <div
+                      <!-- <div
                           class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                           <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
 
-                      </div>
+                      </div> -->
                       <!-- Card Body -->
                       <div class="card-body pb-0 pt-0 py-0 px-0"  cdkDropList
                       [cdkDropListData]="todo"
                       (cdkDropListDropped)="drop($event)">
                           <div class="chart-area">
-                            <div echarts [options]="chartOption" class="demo-chart" [merge]="mergeOptions" (chartInit)="onChartInit($event)"></div>
+                            <div class="row">
+                              <button class="Rectangle-Copy-4">Scenario 1</button>
+                              <button class="Rectangle-Copy-4" disabled>Scenario 2</button>
+                              <button class="Rectangle-Copy-4 pos-abs">Compare</button>
+                            </div>
+
+                            <div echarts [options]="chartOption" class="demo-chart" [merge]="mergeOptions" (chartInit)="onChartInit($event)" #echart></div>
                           </div>
                       </div>
                   </div>
@@ -47,26 +63,26 @@
 
               <!-- Pie Chart -->
               <div class="col-xl-4 col-lg-5 d-flex flex-column">
-                  <div class="card shadow mb-4">
+                  <div class="Rectangle-Copy-16">
                       <!-- Card Body -->
-                      <div class="card-body pb-1 pt-1">
+                      <div class="card-body padding">
 
                         <div class="row">
-                          <div class="col-md-8 d-flex">
+                          <div class="col-md-9 d-flex">
 
                             <div class="col-md-6">
                             <p class="mb-0"><small>Retire at</small></p>
-                            <h5>45 age</h5>
+                            <h3><strong>45 age </strong></h3>
                             </div>
 
                             <div class="col-md-6">
                               <p class="mb-0"><small>Financial end</small></p>
-                              <h5>90 age</h5>
+                              <h3><strong>90 age</strong></h3>
                             </div>
 
                           </div>
 
-                          <div class="col-md-4">
+                          <div class="col-md-3">
                             <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                             src="img/undraw_posting_photo.svg" alt="...">
                           </div>
@@ -74,12 +90,12 @@
 
                         </div>
 
-                        <div class="row">
+                        <div class="row margin-0">
                           <div class="col-md-8">
 
                             <div class="col-md-12">
                               <p class="mb-0"><small>Retirement net worth</small></p>
-                              <h5> &#x20B9; 14.2 Lac</h5>
+                              <h2> <strong>&#x20B9; 14.2 Lac</strong></h2>
                             </div>
                           </div>
                         </div>
@@ -92,7 +108,7 @@
                     <!-- Card Header - Dropdown -->
                     <div
                         class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Add life event</h6>
+                        <h4 class="m-0 font-weight-bold text-primary">Add life event</h4>
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
@@ -102,8 +118,11 @@
                         [cdkDropListData]="done"
                         (cdkDropListDropped)="drop($event)">
                         <div class="col-md-3 event-box" cdkDrag>
-                          <fa-icon [icon]="house" ></fa-icon>
-                          text
+                          <div class="blue-bg">
+                            <fa-icon [icon]="house" ></fa-icon>
+
+                          </div>
+                          <small>House</small>
                         </div>
                       </div>
 
@@ -112,8 +131,11 @@
                       [cdkDropListData]="done2"
                       (cdkDropListDropped)="drop($event)">
                       <div class="col-md-3 event-box" cdkDrag>
-                        <fa-icon [icon]="house" ></fa-icon>
-                        text
+                        <div class="green-bg">
+                          <fa-icon [icon]="house" ></fa-icon>
+
+                        </div>
+                        <small>Education</small>
                       </div>
                     </div>
 
@@ -121,8 +143,11 @@
                     [cdkDropListData]="done3"
                     (cdkDropListDropped)="drop($event)">
                     <div class="col-md-3 event-box" cdkDrag>
-                      <fa-icon [icon]="house" ></fa-icon>
-                      text
+                      <div class="purple-bg">
+                        <fa-icon [icon]="house" ></fa-icon>
+
+                      </div>
+                      <small>Career</small>
                     </div>
                   </div>
 
@@ -133,8 +158,11 @@
                         [cdkDropListData]="done"
                         (cdkDropListDropped)="drop($event)">
                         <div class="col-md-3 event-box" cdkDrag>
-                          <fa-icon [icon]="house" ></fa-icon>
-                          text
+                          <div class="pink-bg">
+                            <fa-icon [icon]="house" ></fa-icon>
+
+                          </div>
+                          <small>Trekking</small>
                         </div>
                       </div>
 
@@ -143,8 +171,11 @@
                       [cdkDropListData]="done2"
                       (cdkDropListDropped)="drop($event)">
                       <div class="col-md-3 event-box" cdkDrag>
-                        <fa-icon [icon]="house" ></fa-icon>
-                        text
+                        <div class="yellow-bg">
+                          <fa-icon [icon]="house" class="yellow"></fa-icon>
+
+                        </div>
+                        <small>Vehicle</small>
                       </div>
                     </div>
 
@@ -152,8 +183,11 @@
                     [cdkDropListData]="done3"
                     (cdkDropListDropped)="drop($event)">
                     <div class="col-md-3 event-box" cdkDrag>
-                      <fa-icon [icon]="house" ></fa-icon>
-                      text
+                      <div class="blue-bg">
+                        <fa-icon [icon]="house" class="blue"></fa-icon>
+
+                      </div>
+                      <small>Special Occassion</small>
                     </div>
                   </div>
 
@@ -165,8 +199,12 @@
                         [cdkDropListData]="done"
                         (cdkDropListDropped)="drop($event)">
                         <div class="col-md-3 event-box" cdkDrag>
-                          <fa-icon [icon]="house" ></fa-icon>
-                          text
+                          <div class="green-bg">
+                            <fa-icon [icon]="house" class="green"></fa-icon>
+
+                          </div>
+                          <small>Be debt free</small>
+
                         </div>
                       </div>
 
@@ -175,8 +213,11 @@
                       [cdkDropListData]="done2"
                       (cdkDropListDropped)="drop($event)">
                       <div class="col-md-3 event-box" cdkDrag>
-                        <fa-icon [icon]="house" ></fa-icon>
-                        text
+                        <div class="purple-bg">
+                          <fa-icon [icon]="house" class="purple"></fa-icon>
+
+                        </div>
+                        <small>Life Expectanc</small>
                       </div>
                     </div>
 
@@ -184,8 +225,11 @@
                     [cdkDropListData]="done3"
                     (cdkDropListDropped)="drop($event)">
                     <div class="col-md-3 event-box" cdkDrag>
-                      <fa-icon [icon]="house" ></fa-icon>
-                      text
+                      <div class="pink-bg">
+                        <fa-icon [icon]="house"></fa-icon>
+
+                      </div>
+                      <small>Custom</small>
                     </div>
                   </div>
 
@@ -208,14 +252,14 @@
               <div class="col-lg-4 mb-4">
 
                   <!-- Out of cash -->
-                  <div class="card shadow mb-4">
-                      <div class="card-body d-flex">
+                  <div class="Rectangle-Copy-14 ">
+                      <div class="card-body padding  d-flex">
                           <div class="text-center">
                               <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                                   src="img/undraw_posting_photo.svg" alt="...">
                           </div>
                           <div>
-                            <h6 class="m-0 font-weight-bold text-primary">Out of cash</h6>
+                            <h4 class="m-0 font-weight-bold text-primary">Out of cash</h4>
                             <p>Out of cash at 28 (2021) with a gap of &#x20B9;<strong>14.2Lac.</strong><br>
                             Tap for more info.</p>
                           </div>
@@ -231,14 +275,14 @@
               <div class="col-lg-4 mb-4">
 
                 <!-- Out of cash -->
-                <div class="card shadow mb-4">
-                    <div class="card-body d-flex">
+                <div class="Rectangle-Copy-14 ">
+                    <div class="card-body padding d-flex">
                         <div class="text-center">
                             <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                                 src="img/undraw_posting_photo.svg" alt="...">
                         </div>
                         <div>
-                          <h6 class="m-0 font-weight-bold text-primary">Out of cash</h6>
+                          <h4 class="m-0 font-weight-bold text-primary">Out of cash</h4>
                           <p>Out of cash at 28 (2021) with a gap of &#x20B9;<strong>14.2Lac.</strong><br>
                           Tap for more info.</p>
                         </div>
@@ -254,14 +298,14 @@
             <div class="col-lg-4 mb-4">
 
               <!-- Out of cash -->
-              <div class="card shadow mb-4">
-                  <div class="card-body d-flex">
+              <div class=" Rectangle-Copy-14">
+                  <div class="card-body padding  d-flex">
                       <div class="text-center">
                           <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                               src="img/undraw_posting_photo.svg" alt="...">
                       </div>
                       <div>
-                        <h6 class="m-0 font-weight-bold text-primary">Out of cash</h6>
+                        <h4 class="m-0 font-weight-bold text-primary">Out of cash</h4>
                         <p>Out of cash at 28 (2021) with a gap of &#x20B9;<strong>14.2Lac.</strong><br>
                         Tap for more info.</p>
                       </div>

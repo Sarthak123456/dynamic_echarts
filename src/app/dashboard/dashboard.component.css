@@ -56,3 +56,136 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: column;
   overflow-y: scroll;
 }
+
+.shop{
+  border: #f5f8ff;
+  background: #f5f8ff;
+  height: 100%;
+  /* width: 50%; */
+  border-radius: 5px;
+  padding:10px;
+}
+.shop2{
+  border: #e6ecfa;
+  background: #e6ecfa;
+  height: 100%;
+  /* width: 50%; */
+  border-radius: 5px;
+  padding:10px;
+}
+
+.Rectangle-Copy-4 {
+  width: 94px;
+  height: 40px;
+  margin: 0 12px 20px 0;
+  padding: 8px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px 0 rgba(191, 202, 217, 0.9), -2px -2px 2px 0 #fff;
+  border: solid 1px #ebeff5;
+  background-color: #f0f4ff;
+}
+
+.Rectangle-Copy-16 {
+  width: 284px;
+  height: 118px;
+  margin: 0 0 16px 16px;
+  /* padding: 14px 12px 2px 15px; */
+  border-radius: 8px;
+  border: solid 1px #cdd5ea;
+  background-color: #eee3ff;
+}
+
+.Rectangle-Copy-14 {
+  width: 324px;
+  height: 108px;
+  margin: 10px 12px 6px 0;
+  /* padding: 14px 25px 16px 16px; */
+  border-radius: 8px;
+  border: solid 1px #cdd5ea;
+  background-color: #f5f8ff;
+}
+
+.padding{
+  padding: 0.30rem;
+}
+
+.blue-bg{
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 8px;
+  object-fit: contain;
+  opacity: 0.3;
+  background-color: #0999f7;
+}
+
+.green-bg{
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 8px;
+  object-fit: contain;
+  opacity: 0.3;
+  background-color: #13cd65;
+}
+
+.purple-bg{
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 8px;
+  object-fit: contain;
+  opacity: 0.3;
+  background-color: #966dfe;
+}
+
+.pink-bg{
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 8px;
+  object-fit: contain;
+  opacity: 0.3;
+  background-color: #fb6c9c;
+}
+
+.yellow-bg{
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 8px;
+  object-fit: contain;
+  opacity: 0.3;
+  background-color: #ffae00;
+
+}
+
+.yellow{
+  opacity: 1 !important;
+  color: orange;
+
+}
+
+.pink{
+  opacity: 1 !important;
+  color: #fb6c9c;
+
+}
+
+.purple{
+  opacity: 1 !important;
+  color: #966dfe;
+
+}
+
+.green{
+  opacity: 1 !important;
+  color: #13cd65;
+
+}
+
+.blue{
+  opacity: 1 !important;
+  color: #0999f7;
+
+}
+
+.margin-0{
+  margin: -20px 0 0 -10px;
+}
